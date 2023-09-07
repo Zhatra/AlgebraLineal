@@ -1,0 +1,166 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\begin{document}
+
+\[
+\boxed{\text{Sean } K = \mathbb{R} \text{ y } V = \{(x_n)_n : x_n \in \mathbb{R} \quad \forall n \in \mathbb{N}^+\}.}
+\]
+\[
+\boxed{\text{1. Sea } p \geq 1. \text{ Demuestra que } l^p = \{(x_n)_n : \sum_{n=1}^\infty |x_n|^p < \infty\} \text{ es un subespacio vectorial de } V.}
+\]
+\text{Sugerencia: Prueba que para cualesquiera } a, b \in \mathbb{R} \text{ se tiene que } |a + b|^p \leq 2^p (|a|^p + |b|^p).
+
+\section*{Demostración}
+
+Para demostrar que \( l^p \) es un subespacio vectorial de \( V \), necesitamos probar tres propiedades:
+
+\begin{enumerate}
+    \item El vector cero está en \( l^p \).
+    \item \( l^p \) es cerrado bajo la suma de vectores.
+    \item \( l^p \) es cerrado bajo la multiplicación por escalares.
+\end{enumerate}
+
+\subsection*{1. Vector cero}
+
+El vector cero en \( V \) es la secuencia \( (x_n)_n \) donde \( x_n = 0 \) para todo \( n \). Claramente, \( \sum_{n=1}^\infty |0|^p = 0 < \infty \), por lo que el vector cero está en \( l^p \).
+
+\subsection*{2. Cerrado bajo la suma}
+
+Supongamos que \( (a_n)_n \) y \( (b_n)_n \) son elementos de \( l^p \). Entonces, \( \sum_{n=1}^\infty |a_n|^p < \infty \) y \( \sum_{n=1}^\infty |b_n|^p < \infty \).
+
+Queremos mostrar que \( (a_n + b_n)_n \) también está en \( l^p \).
+
+\[
+\begin{aligned}
+\sum_{n=1}^\infty |a_n + b_n|^p &\leq \sum_{n=1}^\infty 2^p(|a_n|^p + |b_n|^p) \\
+&= 2^p \left( \sum_{n=1}^\infty |a_n|^p + \sum_{n=1}^\infty |b_n|^p \right) \\
+&< \infty
+\end{aligned}
+\]
+
+La desigualdad \( |a+b|^p \leq 2^p(|a|^p + |b|^p) \) se utiliza en el primer paso, y es válida para \( p \geq 1 \).
+
+\subsection*{3. Cerrado bajo la multiplicación por escalares}
+
+Supongamos que \( (a_n)_n \) es un elemento de \( l^p \) y \( c \) es un escalar en \( \mathbb{R} \).
+
+\[
+\sum_{n=1}^\infty |c a_n|^p = |c|^p \sum_{n=1}^\infty |a_n|^p < \infty
+\]
+
+Por lo tanto, \( (c a_n)_n \) también está en \( l^p \).
+
+Hemos demostrado las tres propiedades, por lo que \( l^p \) es un subespacio vectorial de \( V \).
+
+\[
+\boxed{\text{2. Prueba que el espacio } l^{\infty} = \{(x_n)_n : (x_n)_n \text{ es acotada}\} \text{ es un subespacio vectorial de } V.}
+\]
+
+
+Para demostrar que \( l^\infty \) es un subespacio vectorial de \( V \), necesitamos verificar tres propiedades:
+
+\begin{enumerate}
+    \item \textbf{Vector Cero}: ¿El vector cero está en \( l^\infty \)?
+    \item \textbf{Cerrado bajo la Suma}: Si tomas dos vectores en \( l^\infty \), ¿su suma también está en \( l^\infty \)?
+    \item \textbf{Cerrado bajo la Multiplicación por Escalares}: Si tomas un vector en \( l^\infty \) y lo multiplicas por un escalar, ¿el resultado también está en \( l^\infty \)?
+\end{enumerate}
+
+\subsection*{1. Vector Cero}
+
+El vector cero en \( V \) es la secuencia \( (x_n)_n \) donde \( x_n = 0 \) para todo \( n \). Claramente, esta secuencia es acotada porque todos sus elementos son iguales a cero. Por lo tanto, el vector cero está en \( l^\infty \).
+
+\subsection*{2. Cerrado bajo la Suma}
+
+Supongamos que \( (a_n)_n \) y \( (b_n)_n \) son elementos de \( l^\infty \). Esto significa que ambas secuencias son acotadas. Podemos encontrar constantes \( M \) y \( N \) tales que:
+
+\[
+|a_n| \leq M \quad \text{y} \quad |b_n| \leq N \quad \forall n
+\]
+
+Queremos mostrar que \( (a_n + b_n)_n \) también está en \( l^\infty \).
+
+Para cualquier \( n \), tenemos:
+
+\[
+|a_n + b_n| \leq |a_n| + |b_n| \leq M + N
+\]
+
+Por lo tanto, la secuencia \( (a_n + b_n)_n \) también es acotada y está en \( l^\infty \).
+
+\subsection*{3. Cerrado bajo la Multiplicación por Escalares}
+
+Supongamos que \( (a_n)_n \) es un elemento de \( l^\infty \) y \( c \) es un escalar en \( \mathbb{R} \).
+
+Podemos encontrar una constante \( M \) tal que \( |a_n| \leq M \) para todo \( n \).
+
+Entonces, para cualquier \( n \), tenemos:
+
+\[
+|c a_n| = |c| \cdot |a_n| \leq |c| \cdot M \quad \forall n
+\]
+
+Por lo tanto, \( (c a_n)_n \) también está en \( l^\infty \).
+
+Hemos demostrado las tres propiedades, por lo que \( l^\infty \) es un subespacio vectorial de \( V \).
+
+
+\[
+\boxed{
+\begin{minipage}{1\textwidth}
+3. Prueba que los anteriores subespacios no son de dimensión finita. 
+[Sugerencia: Piensa en sucesiones con unos y ceros.]
+\end{minipage}
+}
+\]
+
+
+\section*{Demostración para \( l^p \)}
+
+\subsection*{Paso 1: Construcción de una familia infinita de vectores}
+
+Consideremos la familia de vectores \( \{ e_n \} \) en \( l^p \), donde cada \( e_n \) es una sucesión que tiene un ``1'' en la \( n \)-ésima posición y ``0'' en todas las demás. Es decir,
+
+\[
+e_1 = (1, 0, 0, \ldots), \quad e_2 = (0, 1, 0, \ldots), \quad e_3 = (0, 0, 1, \ldots), \ldots
+\]
+
+\subsection*{Paso 2: Verificación de que los vectores están en \( l^p \)}
+
+Cada uno de estos vectores \( e_n \) pertenece a \( l^p \) porque la suma de las potencias \( p \)-ésimas de sus elementos es finita. En particular, para cada \( e_n \), tenemos:
+
+\[
+\sum_{i=1}^\infty |(e_n)_i|^p = 1^p + 0 + 0 + \ldots = 1 < \infty
+\]
+
+\subsection*{Paso 3: Verificación de la independencia lineal}
+
+Supongamos que tenemos una combinación lineal de estos vectores que es igual al vector cero:
+
+\[
+c_1 e_1 + c_2 e_2 + c_3 e_3 + \ldots = 0
+\]
+
+Esto implicaría que para cada \( n \), \( c_n \cdot 1 + 0 + 0 + \ldots = 0 \), lo que a su vez implica que \( c_n = 0 \). Por lo tanto, los vectores \( e_n \) son linealmente independientes.
+
+\subsection*{Conclusión para \( l^p \)}
+
+Dado que hemos encontrado una familia infinita de vectores linealmente independientes en \( l^p \), concluimos que \( l^p \) no puede ser de dimensión finita.
+
+\section*{Demostración para \( l^\infty \)}
+
+Para \( l^\infty \), podemos usar exactamente la misma familia de vectores \( \{ e_n \} \) y seguir los mismos pasos que en la demostración para \( l^p \).
+
+\subsection*{Paso 1 y Paso 2}
+
+Los vectores \( e_n \) son sucesiones acotadas, ya que todos sus elementos son 0 o 1. Por lo tanto, cada \( e_n \) está en \( l^\infty \).
+
+\subsection*{Paso 3 y Conclusión}
+
+La independencia lineal de los vectores \( e_n \) y la conclusión son exactamente las mismas que en el caso de \( l^p \).
+
+Por lo tanto, \( l^\infty \) tampoco puede ser de dimensión finita.
+
+
+\end{document}
