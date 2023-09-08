@@ -162,5 +162,46 @@ La independencia lineal de los vectores \( e_n \) y la conclusión son exactamen
 
 Por lo tanto, \( l^\infty \) tampoco puede ser de dimensión finita.
 
+\[
+\boxed{
+\begin{minipage}{0.95\textwidth}
+Sea \( V \) un \( K \)-espacio vectorial y sea \( S \subset V \). Demuestra que \( S \) es un subconjunto linealmente dependiente si y sólo si \( S = \{\theta_V\} \) o bien existen vectores distintos \( v, u_1, \ldots, u_n \in S \) tal que \( v \) es combinación lineal de \( u_1, \ldots, u_n \).
+\end{minipage}
+}
+\]
+
+
+Para demostrar que \( S \) es un subconjunto linealmente dependiente si y sólo si \( S = \{\theta_V\} \) o bien existen vectores distintos \( v, u_1, \ldots, u_n \in S \) tal que \( v \) es combinación lineal de \( u_1, \ldots, u_n \), procederemos en dos partes:
+
+\begin{enumerate}
+    \item \( \Rightarrow \): Si \( S \) es linealmente dependiente, entonces \( S = \{\theta_V\} \) o existen vectores distintos \( v, u_1, \ldots, u_n \in S \) tal que \( v \) es combinación lineal de \( u_1, \ldots, u_n \).
+    \item \( \Leftarrow \): Si \( S = \{\theta_V\} \) o existen vectores distintos \( v, u_1, \ldots, u_n \in S \) tal que \( v \) es combinación lineal de \( u_1, \ldots, u_n \), entonces \( S \) es linealmente dependiente.
+\end{enumerate}
+
+\textbf{Demostración}:
+
+\begin{enumerate}
+    \item \( \Rightarrow \):
+    
+    Supongamos que \( S \) es linealmente dependiente. Entonces, existen vectores \( v_1, v_2, \ldots, v_k \in S \) y escalares \( c_1, c_2, \ldots, c_k \) no todos cero, tales que:
+    \[ c_1 v_1 + c_2 v_2 + \ldots + c_k v_k = \theta_V \]
+    Sin pérdida de generalidad, supongamos que \( c_1 \neq 0 \). Entonces, podemos expresar \( v_1 \) en términos de los otros vectores:
+    \[ v_1 = -\frac{c_2}{c_1} v_2 - \frac{c_3}{c_1} v_3 - \ldots - \frac{c_k}{c_1} v_k \]
+    Esto muestra que \( v_1 \) es una combinación lineal de los otros vectores en \( S \). Si \( k = 1 \), entonces \( c_1 v_1 = \theta_V \), lo que implica que \( v_1 = \theta_V \) y \( S = \{\theta_V\} \).
+
+    \item \( \Leftarrow \):
+
+    \begin{enumerate}
+        \item Si \( S = \{\theta_V\} \), entonces el conjunto es trivialmente linealmente dependiente porque cualquier escalar multiplicado por \( \theta_V \) es igual a \( \theta_V \).
+        \item Supongamos que existen vectores distintos \( v, u_1, \ldots, u_n \in S \) tal que \( v \) es combinación lineal de \( u_1, \ldots, u_n \). Entonces, existen escalares \( a_1, \ldots, a_n \) tales que:
+        \[ v = a_1 u_1 + \ldots + a_n u_n \]
+        Esto implica que:
+        \[ a_1 u_1 + \ldots + a_n u_n - v = \theta_V \]
+        Dado que al menos uno de los escalares (correspondiente a \( -v \)) es diferente de cero, \( S \) es linealmente dependiente.
+    \end{enumerate}
+\end{enumerate}
+
+Por lo tanto, hemos demostrado ambas direcciones, lo que completa la prueba.
+
 
 \end{document}
