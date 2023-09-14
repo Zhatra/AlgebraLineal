@@ -201,7 +201,132 @@ Para demostrar que \( S \) es un subconjunto linealmente dependiente si y sólo 
     \end{enumerate}
 \end{enumerate}
 
-Por lo tanto, hemos demostrado ambas direcciones, lo que completa la prueba.
+Por lo tanto, hemos demostrado ambas direcciones, lo que completa la prueba.\\
+\\ \\
+\boxed{
+\begin{gathered}
+\text{Sea }K\text{ un campo y sea }n\in\mathbb{N}^+.\text{ Demuestra que si }\{A_1,...,A_k\}\text{ es un subconjunto linealmente} \\
+\mathrm{~independiente~de~}M_{n\times n}(K),\mathrm{~entonces~}\{A_{1}^{t},...,A_{k}^{t}\}\mathrm{~también~es~linealmente~independiente}. 
+\end{gathered}
+}\\ \\
 
+\textbf{Demostración:}
+
+Supongamos que el conjunto \( \{A_{1}^{t},...,A_{k}^{t}\} \) es linealmente dependiente. Entonces, existen coeficientes \( c_1, c_2, ..., c_k \) no todos cero, tales que:
+\[ c_1 A_{1}^{t} + c_2 A_{2}^{t} + ... + c_k A_{k}^{t} = 0 \]
+Donde \( 0 \) es la matriz nula de \( n \times n \).
+
+Tomando la transposición en ambos lados de la ecuación, obtenemos:
+\[ (c_1 A_{1}^{t} + c_2 A_{2}^{t} + ... + c_k A_{k}^{t})^t = 0^t \]
+Usando las propiedades de la transposición, la ecuación anterior se convierte en:
+\[ c_1 A_1 + c_2 A_2 + ... + c_k A_k = 0 \]
+Dado que se nos dice que el conjunto \( \{A_1,...,A_k\} \) es linealmente independiente, la única solución a la ecuación anterior es que todos los coeficientes \( c_1, c_2, ..., c_k \) sean cero. Sin embargo, esto contradice nuestra suposición inicial de que no todos los coeficientes son cero.
+
+Por lo tanto, nuestra suposición inicial era incorrecta, y el conjunto \( \{A_{1}^{t},...,A_{k}^{t}\} \) es linealmente independiente.
+
+\[ \blacksquare \]
+
+\boxed{
+\begin{aligned}
+& \text{Sean }K=\mathbb{R}\text{ y }V=\{f:\mathbb{R}\to\mathbb{R}:f\text{ es función}\}.\text{ Definamos a las funciones }f:\mathbb{R}\to\mathbb{R}\text{ y }g:\mathbb{R}\to\mathbb{R} \\
+& \text{por} \\
+& \begin{aligned}f(x)=e^{rx}\quad & \text{y}\quad & g(x)=e^{sx},\end{aligned} \\
+& \text{donde } s\neq r.\text{ Prueba que el conjunto }\{f,g\}\text{es un subconjunto linealmente independiente de }V
+\end{aligned}
+}  \\ \\
+
+\textbf{Demostración:}
+
+Para demostrar que el conjunto \( \{f, g\} \) es linealmente independiente en \( V \), debemos mostrar que si existen coeficientes \( c_1 \) y \( c_2 \) tales que:
+\[ c_1 f(x) + c_2 g(x) = 0 \]
+para todo \( x \in \mathbb{R} \), entonces \( c_1 = 0 \) y \( c_2 = 0 \).
+
+Dadas las definiciones de \( f \) y \( g \), tenemos:
+\[ c_1 e^{rx} + c_2 e^{sx} = 0 \]
+para todo \( x \in \mathbb{R} \).
+
+Para \( x = 0 \), la ecuación anterior se reduce a:
+\[ c_1 + c_2 = 0 \]
+\[ \Rightarrow c_1 = -c_2 \quad \text{(1)} \]
+
+Ahora, derivemos la ecuación con respecto a \( x \):
+\[ c_1 r e^{rx} + c_2 s e^{sx} = 0 \]
+Para \( x = 0 \), obtenemos:
+\[ c_1 r + c_2 s = 0 \]
+\[ \Rightarrow c_1 = -\frac{s}{r} c_2 \quad \text{(2)} \]
+
+Comparando (1) y (2), si \( c_2 \neq 0 \), entonces:
+\[ -c_2 = -\frac{s}{r} c_2 \]
+\[ \Rightarrow r = s \]
+Pero esto contradice nuestra suposición de que \( s \neq r \). Por lo tanto, \( c_2 = 0 \). Usando (1), concluimos que \( c_1 = 0 \) también.
+
+Por lo tanto, el conjunto \( \{f, g\} \) es linealmente independiente en \( V \).
+
+
+\begin{center}
+\boxed{
+\begin{aligned}
+&\text{Sea }V\text{ un }K-\text{espacio vectorial. Demuestra que si }\{v_1,v_2,...,v_n\}\text{ es un subconjunto linealmente}\\
+&\text{independiente de }V,\text{ entonces la lista}\\
+&v_1-v_2,v_2-v_3,...,v_{n-1}-v_n,v_n,\\
+&\text{es un subconjunto linealmente independiente de }V.
+\end{aligned}subconjunto
+}
+\end{center}
+
+\textbf{Demostración:}
+
+Supongamos que existen coeficientes \( c_1, c_2, \ldots, c_n \) tales que:
+\[ c_1(v_1-v_2) + c_2(v_2-v_3) + \ldots + c_{n-1}(v_{n-1}-v_n) + c_n v_n = \theta_V \]
+Donde \( \theta_V \) es el vector cero en \( V \).
+
+Expandiendo y agrupando términos, obtenemos:
+\[ c_1 v_1 + (-c_1 + c_2) v_2 + \ldots + (-c_{n-1} + c_n) v_{n-1} + c_n v_n = \theta_V \]
+
+Para que la combinación lineal anterior sea igual a \( \theta_V \), cada coeficiente de \( v_i \) debe ser cero. Dado que \( \{v_1, v_2, \ldots, v_n\} \) es linealmente independiente, todos los coeficientes \( c_1, c_2, \ldots, c_n \) deben ser cero.
+
+En particular, \( c_n = 0 \) y \( -c_{n-1} + c_n = 0 \), lo que implica que \( c_{n-1} = 0 \). Continuando de esta manera, podemos concluir que todos los coeficientes \( c_1, c_2, \ldots, c_n \) son cero.
+
+Por lo tanto, la lista \( v_1-v_2, v_2-v_3, \ldots, v_{n-1}-v_n, v_n \) es linealmente independiente en \( V \).
+
+\[ \blacksquare \]
+
+
+\boxed{
+\begin{gathered}
+\text{Sea }V\text{ un }K\text{-espacio vectorial. Supongamos que }\{v_1,...,v_n\}\text{ es un subconjunto} \\
+\text{ linealmente independiente de }V\text{ y }w\in V.\text{ Prueba que }\{v_1,...,v_n,w\}\text{ es linealmente independiente  si y sólo si} \\
+w\notin\langle v_1,...,v_n\rangle.
+\end{gathered}
+}
+
+
+\textbf{Demostración:}
+
+Para demostrar que el conjunto \( \{v_1,...,v_n,w\} \) es linealmente independiente si y sólo si \( w \notin \langle v_1,...,v_n \rangle \), vamos a demostrar ambas direcciones:
+
+\textbf{1. \( \Rightarrow \) (Directa):} Supongamos que \( \{v_1,...,v_n,w\} \) es linealmente independiente y suponemos, por contradicción, que \( w \in \langle v_1,...,v_n \rangle \). 
+
+Esto significa que \( w \) puede ser expresado como una combinación lineal de \( v_1,...,v_n \), es decir, existen coeficientes \( c_1,...,c_n \) tales que:
+\[ w = c_1 v_1 + ... + c_n v_n \]
+
+Si consideramos la combinación lineal:
+\[ c_1 v_1 + ... + c_n v_n - w = 0 \]
+
+Esto contradice nuestra suposición de que \( \{v_1,...,v_n,w\} \) es linealmente independiente, ya que no todos los coeficientes son cero. Por lo tanto, \( w \notin \langle v_1,...,v_n \rangle \).
+
+\textbf{2. \( \Leftarrow \) (Recíproca):} Supongamos que \( w \notin \langle v_1,...,v_n \rangle \) y suponemos, por contradicción, que \( \{v_1,...,v_n,w\} \) es linealmente dependiente.
+
+Esto significa que existen coeficientes \( c_1,...,c_n, d \), no todos cero, tales que:
+\[ c_1 v_1 + ... + c_n v_n + d w = 0 \]
+
+Dado que \( \{v_1,...,v_n\} \) es linealmente independiente, esto implica que \( d \neq 0 \). Por lo tanto, podemos expresar \( w \) como:
+\[ w = -\frac{c_1}{d} v_1 - ... - \frac{c_n}{d} v_n \]
+
+Esto contradice nuestra suposición de que \( w \notin \langle v_1,...,v_n \rangle \). Por lo tanto, \( \{v_1,...,v_n,w\} \) es linealmente independiente.
+
+Hemos demostrado ambas direcciones, por lo que la afirmación es verdadera.
+
+\[ \blacksquare \]
 
 \end{document}
